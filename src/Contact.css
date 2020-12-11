@@ -1,0 +1,20 @@
+body {
+  background-color: skyblue;
+}
+
+.ContactForm {
+  background-color: steelblue;
+}
+
+.ContactForm button {
+  background-color: tomato;
+  padding: 9px 18px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+form {
+  background-color: tomato;
+  padding: 10px;
+}
