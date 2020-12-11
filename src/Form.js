@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export class Form extends Component {
+class Form extends Component {
 
   state = {
     name: null,
