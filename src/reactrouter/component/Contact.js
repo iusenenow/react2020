@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Contact = () => {
+const Contact = (props) => {
   return (
     <div className="container">
       <h3 className="center">Contact页面</h3>

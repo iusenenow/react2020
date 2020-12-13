@@ -11,8 +11,6 @@ export default class App extends Component {
       <BrowserRouter>
         <div className="app">
           <Navbar />
-          
-          
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
