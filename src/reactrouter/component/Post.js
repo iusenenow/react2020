@@ -10,7 +10,7 @@ const Post = (props) => {
 
   useEffect(() => {
     let id = props.match.params.post_id
-    fetch('https://jsonplaceholder.typicode.com/posts/' + id)
+    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
       .then(response => response.json())
       .then(data => setstate({ post: data }))
   }, [props.match.params.post_id])
