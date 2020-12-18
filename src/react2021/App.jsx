@@ -6,13 +6,24 @@ const App = () => {
     <div>
       <h1>前端框架列表</h1>
       {data.map((item, idx) => (
-        <ul>
-          <li key={idx}>{item}</li>
+        <ul key={idx}>
+          <li>{item}</li>
         </ul>
       ))}
+      {/* <MyComponent /> */}
     </div>
   )
 }
+
+// function MyComponent() {
+//   console.log(this) //此处的this是undefined，因为babel编译后开启了严格模式
+//   return <h2>我使用函数定义的组件（适用于【简单组件】的定义）</h2>
+// }
+/*
+  执行了ReactDOM.render(<MyComponent/>...)之后发生了什么？
+  1.React解析组件标签，找到了MyComponent组件。
+  2.发现组件是使用函数定义的，随后调用该函数，将返回的虚拟DOM转为真实DOM，随后呈现在页面中。
+*/
 
 export default App
 
@@ -30,6 +41,4 @@ export default App
 (1) if(){}
 (2) for(){}
 (3) switch(){case:xxxx}
-
-
 */
