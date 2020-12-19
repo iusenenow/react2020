@@ -37,3 +37,16 @@ class Student extends Person {
 2.如果A类继承了B类，且A类中写了constructor，那么A类constructor中的super是必须调用的。
 3.类中所定义的方法，都是放在了类的原型对象上，供实例去使用。
 */
+
+class Car {
+  constructor(name, price) {
+    this.name = name
+    this.price = price
+    // this.wheel = 4
+  }
+  //类中可以直接写赋值语句，如下代码的含义是：给Car的实例对象添加一个属性，名为a，值为1
+  a = 1
+}
+
+const car1 = new Car('奔驰c63', 299)
+const car1 = new Car('宝马m3', 288)
