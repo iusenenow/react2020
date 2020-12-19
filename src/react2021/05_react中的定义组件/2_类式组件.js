@@ -2,13 +2,29 @@ import React, { Component } from 'react'
 
 //1.创建Class Component
 export default class MyClassComponent extends Component {
+  constructor(props) {
+    super(props)
+    //初始化状态
+    this.state = {
+      isHot: true
+    }
+    this.changeWeather = this.changeWeather.bind(this)
+  }
+
+  changeWeather() {
+    //changeWeather方法放在了Weather的prototype上，供实例使用
+    //由于changeWeather作为onclick的回调，所以不是通过实例调用的，是直接调用
+    //类中的方法默认开启了局部严格模式，所以changeWeather中的this为undefined
+    console.log(this); // undefiend
+    
+  }
+
   render() {
     //render方法放在了MyClassComponent的prototype上，供实例使用
     //render中的this是谁？=> MyCompoenent组件实例对象
     console.log('render中的this', this);
-    return (
-      <h2>我是用类定义的组件（适用于【复杂组件】的定义）</h2>
-    )
+    //读取状态
+    return <h1 onClick={this.changeWeather}>今天天气很{this.state.isHot ? '炎热。' : '凉爽。'}</h1>
   }
 }
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script type="text/javascript">
+
+    class Person {
+      constructor(name, age) {
+        this.name = name
+        this.age = age
+      }
+      study() {
+        //class中的方法会自动开启use strict模式，所以this为undefined
+        console.log(this);
+      }
+    }
+
+    const p1 = new Person('Tom', 18)
+    p1.study() // Person {name: "Tom", age: 18}
+
+    const x = p1.study
+    x() // undefined
+  </script>
+</body>
+
+</html>
