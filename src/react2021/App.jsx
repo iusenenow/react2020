@@ -1,4 +1,5 @@
 import React from 'react'
+import MyClassComponent from './05_react中的定义组件/2_类式组件';
 
 const App = () => {
   const data = ["Angular", "VUE", "React"]
@@ -11,6 +12,7 @@ const App = () => {
         </ul>
       ))}
       {/* <MyComponent /> */}
+      <MyClassComponent />
     </div>
   )
 }

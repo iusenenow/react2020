@@ -31,5 +31,9 @@ class Student extends Person {
   }
 }
 
-const s1 = new Student('小张', 15, '高一')
-s1.speak()
+/*
+总结：
+1.类中的constructor不是必须写的，要对实例进行一些初始化的操作，如添加指定属性时才写。
+2.如果A类继承了B类，且A类中写了constructor，那么A类constructor中的super是必须调用的。
+3.类中所定义的方法，都是放在了类的原型对象上，供实例去使用。
+*/
