@@ -2,23 +2,26 @@ import React, { Component } from 'react'
 
 //1.创建Class Component
 export default class MyClassComponent extends Component {
+  //构造器执行了几次？--1次
   constructor(props) {
     super(props)
     //初始化状态
-    this.state = {
-      isHot: true
-    }
+    this.state = { isHot: true }
+    //解决changeWeather中指向问题
     this.changeWeather = this.changeWeather.bind(this)
   }
-
+  //changeWeather调用了几次？--点几次调几次
   changeWeather() {
     //changeWeather方法放在了Weather的prototype上，供实例使用
     //由于changeWeather作为onclick的回调，所以不是通过实例调用的，是直接调用
     //类中的方法默认开启了局部严格模式，所以changeWeather中的this为undefined
-    console.log(this); // undefiend
-    
+    //console.log(this); // undefiend
+
+    //状态不可直接更改，须借助一个内置API：setState更改，且更新是一种合并
+    this.setState({ isHot: !this.state.isHot })
   }
 
+  //render执行了几次？--1+n次 1是初始化的那次 n是状态更新的次数
   render() {
     //render方法放在了MyClassComponent的prototype上，供实例使用
     //render中的this是谁？=> MyCompoenent组件实例对象
