@@ -1,6 +1,6 @@
 import React from 'react'
-import MyClassComponent from './05_react中的定义组件/2_类式组件';
-import MyClassComponentEasy from './06_组件的实例三大属性之state/2_state的简写方式';
+// import MyClassComponent from './05_react中的定义组件/2_类式组件';
+// import MyClassComponentEasy from './06_组件的实例三大属性之state/2_state的简写方式';
 import Person from './07_组件的三大属性之props/1_props基本使用';
 
 const App = () => {
@@ -16,7 +16,7 @@ const App = () => {
       {/* <MyComponent /> */}
       {/* <MyClassComponent />
       <MyClassComponentEasy /> */}
-      <Person />
+      <Person name="Tom" age="18" sex="女" />
     </div>
   )
 }
