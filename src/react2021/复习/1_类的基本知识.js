@@ -46,6 +46,8 @@ class Car {
   }
   //类中可以直接写赋值语句，如下代码的含义是：给Car的实例对象添加一个属性，名为a，值为1
   a = 1
+  wheel = 4
+  static demo = 100 //static关键字把属性加给类本身
 }
 
 const car1 = new Car('奔驰c63', 299)
