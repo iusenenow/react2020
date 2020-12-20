@@ -7,7 +7,7 @@ class Person extends Component {
       <ul>
         <li>姓名：{name}</li>
         <li>性别：{sex}</li>
-        <li>年龄：{age}</li>
+        <li>年龄：{+age + 1}</li>
       </ul>
     )
   }
