@@ -1,7 +1,8 @@
 import React from 'react'
 // import MyClassComponent from './05_react中的定义组件/2_类式组件';
 // import MyClassComponentEasy from './06_组件的实例三大属性之state/2_state的简写方式';
-import Person from './07_组件的三大属性之props/2_对props进行限制';
+// import Person from './07_组件的三大属性之props/2_对props进行限制';
+import Person from './07_组件的三大属性之props/3_函数组件使用props'
 
 const App = () => {
   const data = ["Angular", "VUE", "React"]

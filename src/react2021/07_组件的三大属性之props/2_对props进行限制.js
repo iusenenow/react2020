@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 class Person extends Component {
 
   // constructor(props){
-  //   //构造器是否接受props，是否传递给super，取决于：是否希望在构造器中通过this访问props，实际工作中极其罕见，基本不写constructor
+  //   //构造器是否接收props，是否传递给super，取决于：是否希望在构造器中通过this访问props，实际工作中极其罕见，基本不写constructor
   //   super(props)
   //   console.log('constructor', this.props);
   // }
