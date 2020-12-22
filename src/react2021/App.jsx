@@ -3,7 +3,7 @@ import React from 'react'
 // import MyClassComponentEasy from './06_组件的实例三大属性之state/2_state的简写方式';
 // import Person from './07_组件的三大属性之props/2_对props进行限制';
 // import Person from './07_组件的三大属性之props/3_函数组件使用props'
-import Demo from './08_组件实例三大属性之refs/3_回调ref中回调执行次数的问题'
+import Demo from './08_组件实例三大属性之refs/4_createRef'
 
 const App = () => {
   const data = ["Angular", "VUE", "React"]

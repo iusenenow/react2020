@@ -16,7 +16,6 @@ class Demo extends Component {
 
   saveInput = currentNode => {
     this.input1 = currentNode
-    console.log(currentNode);
   }
 
   render() {
