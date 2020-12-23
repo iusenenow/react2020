@@ -3,7 +3,8 @@ import React from 'react'
 // import MyClassComponentEasy from './06_组件的实例三大属性之state/2_state的简写方式';
 // import Person from './07_组件的三大属性之props/2_对props进行限制';
 // import Person from './07_组件的三大属性之props/3_函数组件使用props'
-import Demo from './08_组件实例三大属性之refs/4_createRef'
+// import Demo from './08_组件实例三大属性之refs/4_createRef'
+import Login from './10_react中收集表单数据/1_非受控组件';
 
 const App = () => {
   const data = ["Angular", "VUE", "React"]
@@ -20,7 +21,8 @@ const App = () => {
       <MyClassComponentEasy /> */}
       {/* <Person name="Teresa" age={18} sex="女" />
       <Person name="Isabel" age={18} /> */}
-      <Demo />
+      {/* <Demo /> */}
+      <Login />
     </div>
   )
 }
