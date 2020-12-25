@@ -4,18 +4,18 @@ import React from 'react'
 // import Person from './07_组件的三大属性之props/2_对props进行限制';
 // import Person from './07_组件的三大属性之props/3_函数组件使用props'
 // import Demo from './08_组件实例三大属性之refs/4_createRef'
-import Login from './10_react中收集表单数据/1_非受控组件';
+import Login from './10_react中收集表单数据/2_受控组件';
 
 const App = () => {
   const data = ["Angular", "VUE", "React"]
   return (
     <div>
-      <h1>前端框架列表</h1>
+      {/* <h1>前端框架列表</h1>
       {data.map((item, idx) => (
         <ul key={idx}>
           <li>{item}</li>
         </ul>
-      ))}
+      ))} */}
       {/* <MyComponent /> */}
       {/* <MyClassComponent />
       <MyClassComponentEasy /> */}

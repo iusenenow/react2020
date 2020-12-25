@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Login extends Component {
   handleSubmit = e => {
-    e.preventDefault()
+    e.preventDefault() //阻止表单提交
     console.log(`用戶名：${this.username.value}，密碼：${this.password.value}`);
   }
   render() {
