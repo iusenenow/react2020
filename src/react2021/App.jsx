@@ -1,13 +1,14 @@
 import React from 'react'
+import LifeCycle from './12_组件的生命周期/1_引出生命周期'
 // import MyClassComponent from './05_react中的定义组件/2_类式组件';
 // import MyClassComponentEasy from './06_组件的实例三大属性之state/2_state的简写方式';
 // import Person from './07_组件的三大属性之props/2_对props进行限制';
 // import Person from './07_组件的三大属性之props/3_函数组件使用props'
 // import Demo from './08_组件实例三大属性之refs/4_createRef'
-import Login from './10_react中收集表单数据/2_受控组件';
+// import Login from './10_react中收集表单数据/2_受控组件';
 
 const App = () => {
-  const data = ["Angular", "VUE", "React"]
+  // const data = ["Angular", "VUE", "React"]
   return (
     <div>
       {/* <h1>前端框架列表</h1>
@@ -22,7 +23,8 @@ const App = () => {
       {/* <Person name="Teresa" age={18} sex="女" />
       <Person name="Isabel" age={18} /> */}
       {/* <Demo /> */}
-      <Login />
+      {/* <Login /> */}
+      <LifeCycle />
     </div>
   )
 }
