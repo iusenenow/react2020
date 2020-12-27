@@ -16,6 +16,9 @@ class Count extends Component {
     this.setState({ count: count + 1 })
   }
 
+  remove = () => {
+    unmountComponentAtNode(document.getElementById('root'))
+  }
   //组件将要挂载的钩子
   componentWillMount() {
     console.log('Count-componentWillMount');
@@ -25,12 +28,23 @@ class Count extends Component {
     console.log('Count-componentDidMount');
   }
 
-  remove = () => {
-    unmountComponentAtNode(document.getElementById('root'))
-  }
-
+  //组件将要卸载的钩子
   componentWillUnmount() {
     console.log('Count-componentWillUnmount');
+  }
+  //控制组件更新的“阀门”钩子
+  shouldComponentUpdate() {
+    //不写钩子默认为true
+    console.log('Count-shouldComponentUpdate');
+    return true
+  }
+  //组件将要更新的钩子
+  componentWillUpdate() {
+    console.log('Count-componentWillUpdate');
+  }
+  //组件更新完毕的钩子
+  componentDidUpdate() {
+    console.log('Count-componentDidUpdate');
   }
 
   render() {
