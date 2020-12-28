@@ -6,7 +6,7 @@ import React from 'react'
 // import Person from './07_组件的三大属性之props/3_函数组件使用props'
 // import Demo from './08_组件实例三大属性之refs/4_createRef'
 // import Login from './10_react中收集表单数据/2_受控组件';
-import Count from './12_组件的生命周期/2_react生命周期(旧)';
+import Count from './12_组件的生命周期/3_react生命周期(新)';
 
 const App = () => {
   // const data = ["Angular", "VUE", "React"]
@@ -26,7 +26,7 @@ const App = () => {
       {/* <Demo /> */}
       {/* <Login /> */}
       {/* <LifeCycle /> */}
-      <Count />
+      <Count count={200} />
     </div>
   )
 }
