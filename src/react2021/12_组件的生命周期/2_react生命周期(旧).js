@@ -1,5 +1,20 @@
 import React, { Component } from 'react'
 import { unmountComponentAtNode } from 'react-dom';
+/*
+生命周期的三个阶段（旧）
+	1. 初始化阶段: 由ReactDOM.render()触发---初次渲染
+    1.	constructor()
+    2.	componentWillMount()
+    3.	render()
+    4.	componentDidMount()
+	2. 更新阶段: 由组件内部this.setSate()或父组件重新render触发
+    1.	shouldComponentUpdate()
+    2.	componentWillUpdate()
+    3.	render()
+    4.	componentDidUpdate()
+	3. 卸载组件: 由ReactDOM.unmountComponentAtNode()触发
+    1.	componentWillUnmount()
+*/
 //创建组件
 class Count extends Component {
   //构造器
@@ -61,9 +76,54 @@ class Count extends Component {
         <button onClick={this.remove}>卸载</button>
         <br />
         <button onClick={this.force}>强制更新</button>
+        <A />
       </div>
     )
   }
 }
+//父组件A
+class A extends Component {
+  //初始化状态
+  state = { carName: '奔驰' }
+
+  changeCar = () => {
+    this.setState({ carName: '奥拓' })
+  }
+  render() {
+    return (
+      <div>
+        <h4>我是A组件</h4>
+        <button onClick={this.changeCar}>点我换车</button>
+        <B carName={this.state.carName} />
+      </div>
+    )
+  }
+}
+//子组件B
+class B extends Component {
+  componentWillReceiveProps() {
+    console.log('B-componentWillReceiveProps');
+  }
+  shouldComponentUpdate() {
+    console.log('B-shouldComponentUpdate');
+    return true
+  }
+  componentWillUpdate() {
+    console.log('B-componentWillUpdate');
+  }
+  componentDidUpdate() {
+    console.log('B-componentDidUpdate');
+  }
+  render() {
+    console.log('B-render');
+    return (
+      <div>
+        <h4>我是B组件，接受到的车是：{this.props.carName}</h4>
+      </div>
+    )
+  }
+}
+
+
 
 export default Count
