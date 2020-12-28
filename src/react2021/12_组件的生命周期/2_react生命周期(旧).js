@@ -19,6 +19,10 @@ class Count extends Component {
   remove = () => {
     unmountComponentAtNode(document.getElementById('root'))
   }
+
+  force = () => {
+    this.forceUpdate()
+  }
   //组件将要挂载的钩子
   componentWillMount() {
     console.log('Count-componentWillMount');
@@ -27,7 +31,6 @@ class Count extends Component {
   componentDidMount() {
     console.log('Count-componentDidMount');
   }
-
   //组件将要卸载的钩子
   componentWillUnmount() {
     console.log('Count-componentWillUnmount');
@@ -54,8 +57,10 @@ class Count extends Component {
       <div>
         <h2>当前求和为：{count}</h2>
         <button onClick={this.addOne}>+1</button>
-        <br></br>
+        <br />
         <button onClick={this.remove}>卸载</button>
+        <br />
+        <button onClick={this.force}>强制更新</button>
       </div>
     )
   }
