@@ -1,7 +1,20 @@
 import React, { Component } from 'react'
 import { unmountComponentAtNode } from 'react-dom';
 /*
-	
+	生命周期的三个阶段（新）
+    1. 初始化阶段: 由ReactDOM.render()触发---初次渲染
+      1.	constructor()
+      2.	getDerivedStateFromProps 
+      3.	render()
+      4.	componentDidMount()
+    2. 更新阶段: 由组件内部this.setSate()或父组件重新render触发
+      1.	getDerivedStateFromProps
+      2.	shouldComponentUpdate()
+      3.	render()
+      4.	getSnapshotBeforeUpdate
+      5.	componentDidUpdate()
+    3. 卸载组件: 由ReactDOM.unmountComponentAtNode()触发
+      1.	componentWillUnmount()
 */
 //创建组件
 class Count extends Component {
@@ -29,8 +42,13 @@ class Count extends Component {
 
   //若state的值在任何时候都取决于props，那么可以使用getDerivedStateFromProps
   static getDerivedStateFromProps(props, state) {
-    console.log('Count-getDerivedStateFromProps', props, state);
-    return props
+    console.log('getDerivedStateFromProps', props, state);
+    return null
+  }
+  //在更新之前获取快照
+  getSnapshotBeforeUpdate() {
+    console.log('getSnapshotBeforeUpdate');
+    return '123'
   }
 
   //组件挂载完毕的钩子
@@ -48,8 +66,8 @@ class Count extends Component {
     return true
   }
   //组件更新完毕的钩子
-  componentDidUpdate() {
-    console.log('Count-componentDidUpdate');
+  componentDidUpdate(preProps, preState, snapshotValue) {
+    console.log('Count-componentDidUpdate', preProps, preState, snapshotValue);
   }
 
   render() {

@@ -7,6 +7,7 @@ import React from 'react'
 // import Demo from './08_组件实例三大属性之refs/4_createRef'
 // import Login from './10_react中收集表单数据/2_受控组件';
 import Count from './12_组件的生命周期/3_react生命周期(新)';
+import NewsList from './12_组件的生命周期/4_getSnapshotBeforeUpdate的使用场景';
 
 const App = () => {
   // const data = ["Angular", "VUE", "React"]
@@ -27,6 +28,7 @@ const App = () => {
       {/* <Login /> */}
       {/* <LifeCycle /> */}
       <Count count={200} />
+      <NewsList />
     </div>
   )
 }
