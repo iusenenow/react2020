@@ -4,9 +4,9 @@ export default class Time extends Component {
   state = { date: new Date() }
 
   componentDidMount() {
-    setInterval(() => {
-      this.setState({ date: new Date() })
-    }, 1000);
+    // setInterval(() => {
+    //   this.setState({ date: new Date() })
+    // }, 1000);
   }
   render() {
     return (
