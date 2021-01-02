@@ -31,6 +31,8 @@ const App = () => {
       {/* <Count count={200} />
       <NewsList /> */}
       <Time />
+      <Welcome />
+      <Welcome2 />
     </div>
   )
 }
@@ -62,3 +64,15 @@ export default App
 (2) for(){}
 (3) switch(){case:xxxx}
 */
+
+class Welcome extends React.Component {
+  render() {
+    return <h2 style={{ backgroundColor: "coral" }}>Demo</h2>
+  }
+}
+
+class Welcome2 extends React.Component {
+  render() {
+    return <h3 style={{ backgroundColor: "lightblue" }}>Hello</h3>
+  }
+}
