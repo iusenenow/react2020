@@ -15,9 +15,7 @@ export default class Item extends Component {
     return () => this.props.toggleTodo(id)
   }
   //删除一个todo的回调
-  handleDelete = id => {
-    console.log(id);
-  }
+  handleDelete = id => this.props.deleteTodo(id)
 
   render() {
     const { id, name, isDone } = this.props

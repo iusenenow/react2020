@@ -26,13 +26,18 @@ export class App extends Component {
     this.setState({ todos })
   }
 
+  deleteTodo = id => {
+    const todos = this.state.todos.filter(todo => todo.id !== id)
+    this.setState({ todos })
+  }
+
   render() {
     const { todos } = this.state
     return (
       <div className="todo-container">
         <div className="todo-wrap">
           <Header addTodo={this.addTodo} />
-          <List todos={todos} toggleTodo={this.toggleTodo} />
+          <List todos={todos} toggleTodo={this.toggleTodo} deleteTodo={this.deleteTodo} />
           <Footer />
         </div>
       </div>
