@@ -15,7 +15,10 @@ export default class Item extends Component {
     return () => this.props.toggleTodo(id)
   }
   //删除一个todo的回调
-  handleDelete = id => this.props.deleteTodo(id)
+  handleDelete = id => {
+    if (window.confirm('确定删除吗？'))
+      this.props.deleteTodo(id)
+  }
 
   render() {
     const { id, name, isDone } = this.props
@@ -24,7 +27,7 @@ export default class Item extends Component {
     return (
       <li onMouseLeave={this.handleMouse(false)} onMouseEnter={this.handleMouse(true)} style={{ backgroundColor: mouse ? '#ddd' : '#fff', transition: "all .4s ease-in-out" }}>
         <label >
-          <input type="checkbox" defaultChecked={isDone} onChange={this.handleCheck(id)} />
+          <input type="checkbox" checked={isDone} onChange={this.handleCheck(id)} />
           <span>{name}</span>
         </label>
         <button onClick={() => this.handleDelete(id)} className="btn btn-danger" style={{ display: mouse ? 'block' : 'none' }}>删除</button>
