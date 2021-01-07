@@ -5,6 +5,9 @@ import List from './List/index';
 import Footer from './Footer/index';
 
 export class App extends Component {
+
+  
+
   //状态在哪里，操作状态的方法就在哪里
 
   state = {
