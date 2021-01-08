@@ -3,11 +3,9 @@ import "./App.css"
 import Header from './Header/index';
 import List from './List/index';
 import Footer from './Footer/index';
+import axios from 'axios';
 
 export class App extends Component {
-
-  
-
   //状态在哪里，操作状态的方法就在哪里
 
   state = {
@@ -44,6 +42,18 @@ export class App extends Component {
     this.setState({ todos })
   }
 
+  getStudentData = () => {
+    axios.get('http://localhost:3000/students')
+      .then(response => console.log(response.data))
+      .then(error => console.log(error))
+  }
+
+  getCarData = () => {
+    axios.get('http://localhost:3000/cars')
+      .then(response => console.log(response.data))
+      .then(error => console.log(error))
+  }
+
   render() {
     const { todos } = this.state
     return (
@@ -53,6 +63,8 @@ export class App extends Component {
           <List todos={todos} toggleTodo={this.toggleTodo} deleteTodo={this.deleteTodo} />
           <Footer todos={todos} checkAllTodos={this.checkAllTodos} clearAllDone={this.clearAllDone} />
         </div>
+        <button onClick={this.getStudentData}>点我获取学生数据</button>
+        <button onClick={this.getCarData}>点我获取汽车数据</button>
       </div>
     )
   }
