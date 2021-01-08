@@ -43,13 +43,13 @@ export class App extends Component {
   }
 
   getStudentData = () => {
-    axios.get('http://localhost:3000/students')
+    axios.get('http://localhost:3000/api1/students')
       .then(response => console.log(response.data))
       .then(error => console.log(error))
   }
 
   getCarData = () => {
-    axios.get('http://localhost:3000/cars')
+    axios.get('http://localhost:3000/api2/cars')
       .then(response => console.log(response.data))
       .then(error => console.log(error))
   }
