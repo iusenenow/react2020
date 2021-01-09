@@ -5,36 +5,14 @@ export default class List extends Component {
     return (
       <div>
         <div className="row">
-          <div className="card">
-            <a href="https://github.com/reactjs" target="_blank" rel="noreferrer">
-              <img alt="head-pic" src="https://avatars.githubusercontent.com/u/6412038?v=3" style={{ width: '100px' }} />
-            </a>
-            <p className="card-text">reactjs</p>
-          </div>
-          <div className="card">
-            <a href="https://github.com/reactjs" target="_blank" rel="noreferrer">
-              <img alt="head-pic" src="https://avatars.githubusercontent.com/u/6412038?v=3" style={{ width: '100px' }} />
-            </a>
-            <p className="card-text">reactjs</p>
-          </div>
-          <div className="card">
-            <a href="https://github.com/reactjs" target="_blank" rel="noreferrer">
-              <img alt="head-pic" src="https://avatars.githubusercontent.com/u/6412038?v=3" style={{ width: '100px' }} />
-            </a>
-            <p className="card-text">reactjs</p>
-          </div>
-          <div className="card">
-            <a href="https://github.com/reactjs" target="_blank" rel="noreferrer">
-              <img alt="head-pic" src="https://avatars.githubusercontent.com/u/6412038?v=3" style={{ width: '100px' }} />
-            </a>
-            <p className="card-text">reactjs</p>
-          </div>
-          <div className="card">
-            <a href="https://github.com/reactjs" target="_blank" rel="noreferrer">
-              <img alt="head-pic" src="https://avatars.githubusercontent.com/u/6412038?v=3" style={{ width: '100px' }} />
-            </a>
-            <p className="card-text">reactjs</p>
-          </div>
+          {this.props.users.map(user => (
+            <div key={user.id} className="card">
+              <a href={user.html_url} target="_blank" rel="noreferrer">
+                <img alt="head-pic" src={user.avatar_url} style={{ width: '100px' }} />
+              </a>
+              <p className="card-text">{user.login}</p>
+            </div>
+          ))}
         </div>
       </div>
     )
