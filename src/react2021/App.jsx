@@ -8,7 +8,9 @@ import React from 'react'
 // import Login from './10_react中收集表单数据/2_受控组件';
 // import Count from './12_组件的生命周期/3_react生命周期(新)';
 // import NewsList from './12_组件的生命周期/4_getSnapshotBeforeUpdate的使用场景';
-import Time from './13_DOM的Diffing算法/1_验证Diffing算法';
+// import Time from './13_DOM的Diffing算法/1_验证Diffing算法';
+import Github from './github_search/Github';
+import './github_search/App.css'
 
 const App = () => {
   // const data = ["Angular", "VUE", "React"]
@@ -30,9 +32,10 @@ const App = () => {
       {/* <LifeCycle /> */}
       {/* <Count count={200} />
       <NewsList /> */}
-      <Time />
-      <Welcome />
-      <Welcome2 />
+      {/* <Time /> */}
+      {/* <Welcome />
+      <Welcome2 /> */}
+      <Github />
     </div>
   )
 }
@@ -65,14 +68,14 @@ export default App
 (3) switch(){case:xxxx}
 */
 
-class Welcome extends React.Component {
-  render() {
-    return <h2 style={{ backgroundColor: "coral" }}>Demo</h2>
-  }
-}
+// class Welcome extends React.Component {
+//   render() {
+//     return <h2 style={{ backgroundColor: "coral" }}>Demo</h2>
+//   }
+// }
 
-class Welcome2 extends React.Component {
-  render() {
-    return <h3 style={{ backgroundColor: "lightblue" }}>Hello</h3>
-  }
-}
+// class Welcome2 extends React.Component {
+//   render() {
+//     return <h3 style={{ backgroundColor: "lightblue" }}>Hello</h3>
+//   }
+// }
