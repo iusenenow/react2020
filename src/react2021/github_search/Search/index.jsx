@@ -13,7 +13,7 @@ export default class Search extends Component {
       //请求成功后更新状态
       .then(response => this.props.updateState({ isLoading: false, users: response.data.items }))
       //请求失败后更新状态
-      .then(error => this.props.updateState({ isLoading: false, error }))
+      .then(error => this.props.updateState({ isLoading: false, error: error.messege }))
   }
 
   render() {
