@@ -4,7 +4,7 @@ import List from './List/index';
 
 export default class Github extends Component {
 
-  state = { users: [], isFirst:true, isLoading:false,error:'' }
+  state = { users: [], isFirst: true, isLoading: false, error: '' }
 
   updateState = state => this.setState(state)
 
