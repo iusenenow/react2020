@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link, BrowserRouter as Router, Route } from 'react-router-dom'
 import About from './About';
 import Home from './Home';
+import Header from './Header';
 
 export default class App extends Component {
   render() {
@@ -10,10 +11,9 @@ export default class App extends Component {
         <div>
           <div className="row">
             <div className="col-xs-offset-2 col-xs-8">
-              <div className="page-header"><h2>React Router Demo</h2></div>
+              <Header />
             </div>
           </div>
-
           <div className="row">
             <div className="col-xs-2 col-xs-offset-2">
               <div className="list-group">
