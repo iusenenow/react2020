@@ -22,9 +22,9 @@ export default class Home_message_detail extends Component {
     // const { id, title } = qs.parse(search.slice(1))
 
     //接受state参数
-    // const { id, title } = this.props.location.state
+    // const { id, title } = this.props.location.state || {}
 
-    const findResult = detailData.find(detailObj => detailObj.id === id)
+    const findResult = detailData.find(detailObj => detailObj.id === id) || {}
     return (
       <ul>
         <li>ID：{id}</li>
