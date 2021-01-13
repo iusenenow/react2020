@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './antd/App';
+import App from './redux-test/App';
 
 ReactDOM.render(
   <React.StrictMode>
