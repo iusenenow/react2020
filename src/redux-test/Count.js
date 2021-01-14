@@ -1,31 +1,34 @@
 import React, { Component } from 'react'
 import store from './redux/store'
+import { createIncrementAction, createDecrementAction } from './redux/count_action';
 
 export default class Count extends Component {
-  state = { count: 0 }
+  // componentDidMount() {
+  //   //监测redux中的状态的变化，只要变化，就调用render
+  //   store.subscribe(() => {
+  //     this.setState({})
+  //   })
+  // }
 
   increment = () => {
     const { value } = this.selectNumber
-    const { count } = this.state
-    this.setState({ count: count + Number(value) })
+    store.dispatch(createIncrementAction(Number(value)))
   }
 
   decrement = () => {
     const { value } = this.selectNumber
-    const { count } = this.state
-    this.setState({ count: count - Number(value) })
+    store.dispatch(createDecrementAction(Number(value)))
   }
   incrementIfOdd = () => {
     const { value } = this.selectNumber
-    const { count } = this.state
+    const count = store.getState()
     if (count % 2 !== 0)
-      this.setState({ count: count + Number(value) })
+      store.dispatch(createIncrementAction(Number(value)))
   }
   incrementAsync = () => {
     const { value } = this.selectNumber
-    const { count } = this.state
     setTimeout(() => {
-      this.setState({ count: count + Number(value) })
+      store.dispatch(createIncrementAction(Number(value)))
     }, 500)
   }
 
