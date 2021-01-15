@@ -12,18 +12,17 @@ export default class Count extends Component {
 
   increment = () => {
     const { value } = this.selectNumber
-    store.dispatch(createIncrementAction(Number(value)))
+    this.props.increment(Number(value))
   }
 
   decrement = () => {
     const { value } = this.selectNumber
-    store.dispatch(createDecrementAction(Number(value)))
+    this.props.decrement(Number(value))
   }
   incrementIfOdd = () => {
     const { value } = this.selectNumber
-    const count = store.getState()
-    if (count % 2 !== 0)
-      store.dispatch(createIncrementAction(Number(value)))
+    if (this.props.count % 2 !== 0)
+      this.props.increment(Number(value))
   }
   incrementAsync = () => {
     const { value } = this.selectNumber
@@ -31,9 +30,9 @@ export default class Count extends Component {
     // setTimeout(() => {
     //   store.dispatch(createIncrementAction(Number(value)))
     // }, 500)
-    
+
     //异步action
-    store.dispatch(createIncrementAsyncAction(Number(value), 500))
+    this.props.incrementAsync(Number(value),500)
   }
 
   render() {
