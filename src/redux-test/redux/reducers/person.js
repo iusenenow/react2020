@@ -6,7 +6,7 @@ export default function personReducer(preState = initialState, action) {
   const { type, data } = action
   switch (type) {
     case ADD_PERSON:
-      return [...preState, data]
+      return [data, ...preState]
     default:
       return preState
   }
