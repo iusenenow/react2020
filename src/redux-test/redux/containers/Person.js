@@ -10,8 +10,8 @@ class Person extends Component {
     const age = this.age.value
     const personObj = { id: nanoid(), name, age }
     this.props.addPerson(personObj)
-    this.name.value = 0
-    this.age.value = 0
+    this.name.value = ''
+    this.age.value = ''
   }
 
   render() {
