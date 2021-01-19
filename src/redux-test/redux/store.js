@@ -6,8 +6,8 @@ import personReducer from './reducers/person';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 const allReducers = combineReducers({
-  he: countReducer,
-  rens: personReducer
+  count: countReducer,
+  people: personReducer
 })
 
 export default createStore(allReducers, composeWithDevTools(applyMiddleware(thunk)))

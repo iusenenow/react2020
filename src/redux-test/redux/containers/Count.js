@@ -41,7 +41,7 @@ class Count extends Component {
     return (
       <div>
         <h2>我是Count组件</h2>
-        <h4>下方组件总人数为：{this.props.renshu}</h4>
+        <h4>下方组件总人数为：{this.props.people}</h4>
         <h3>当前求和为：{this.props.count}</h3>
         <select ref={c => this.selectNumber = c}>
           <option value="1">1</option>
@@ -80,8 +80,8 @@ class Count extends Component {
 export default connect(
   //映射状态
   state => ({
-    count: state.he,
-    renshu: state.rens.length
+    count: state.count,
+    people: state.people.length
   }),
   //映射操作状态的方法
   //mapDispatchToProps的简写：
