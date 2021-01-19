@@ -1,13 +1,8 @@
 //该文件专门用于暴露store对象，整个应用只有一个store对象
-import { createStore, applyMiddleware, combineReducers } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
-import countReducer from './reducers/count'
-import personReducer from './reducers/person';
+import reducer from './reducers'
+
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-const allReducers = combineReducers({
-  count: countReducer,
-  people: personReducer
-})
-
-export default createStore(allReducers, composeWithDevTools(applyMiddleware(thunk)))
+export default createStore(reducer, composeWithDevTools(applyMiddleware(thunk)))

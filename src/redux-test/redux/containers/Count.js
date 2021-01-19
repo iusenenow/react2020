@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 //移入connect用于连接UI组件与redux
 import { connect } from 'react-redux'
 //引入action
-import { createDecrementAction, createIncrementAction, createIncrementAsyncAction } from '../actions/count';
+import { decrement, increment, incrementAsync } from '../actions/count';
 
 //定义UI组件
 class Count extends Component {
@@ -85,9 +85,5 @@ export default connect(
   }),
   //映射操作状态的方法
   //mapDispatchToProps的简写：
-  {
-    increment: createIncrementAction,
-    decrement: createDecrementAction,
-    incrementAsync: createIncrementAsyncAction
-  }
+  { increment, decrement, incrementAsync }
 )(Count)

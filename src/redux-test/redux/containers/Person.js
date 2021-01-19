@@ -1,7 +1,7 @@
 import { nanoid } from 'nanoid'
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { createAddPersonAction } from '../actions/person';
+import { addPerson } from '../actions/person';
 
 class Person extends Component {
 
@@ -35,5 +35,5 @@ export default connect(
     people: state.people,
     count: state.count
   }),
-  { addPerson: createAddPersonAction }
+  { addPerson }
 )(Person)
