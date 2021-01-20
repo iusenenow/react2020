@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+// import { Provider } from 'react-redux';
 import App from './react-extension/App';
-import store from './redux-test/redux/store'
+// import store from './redux-test/redux/store'
+import { BrowserRouter } from 'react-router-dom';
 
+//此处需要用Provider包裹App，目的是让App所有的后代容器组件都能接收到store
+// <Provider store={store}>
+// </Provider>
 ReactDOM.render(
-  //此处需要用Provider包裹App，目的是让App所有的后代容器组件都能接收到store
-  <Provider store={store}>
+  <BrowserRouter>
     <App />
-  </Provider>,
+  </BrowserRouter>,
   document.getElementById('root')
 )
 
