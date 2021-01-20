@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import { unmountComponentAtNode } from 'react-dom'
 
 export class LifeCycle extends Component {
-  /*
-    1.组件从
-  */
+  
   state = { opacity: 1 }
 
   removeComponents = () => {

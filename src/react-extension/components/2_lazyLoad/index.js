@@ -1,7 +1,9 @@
-import React, { Component } from 'react'
+import React, { Component, lazy, Suspense } from 'react'
 import { NavLink, Route } from 'react-router-dom'
-import Home from './Home' //Home是路由组件
-import About from './About' //About是路由组件
+// import Home from './Home' //Home是路由组件
+// import About from './About' //About是路由组件
+const Home = lazy(() => import('./Home'))
+const About = lazy(() => import('./About'))
 // import Header from './components/Header' //Header是一般组件
 
 export default class Demo extends Component {
@@ -30,8 +32,10 @@ export default class Demo extends Component {
             <div className="panel">
               <div className="panel-body">
                 {/* 注册路由 */}
-                <Route path="/about" component={About} />
-                <Route path="/home" component={Home} />
+                <Suspense fallback={<h1>Loading...</h1>}>
+                  <Route path="/about" component={About} />
+                  <Route path="/home" component={Home} />
+                </Suspense>
               </div>
             </div>
           </div>

@@ -18,3 +18,17 @@ ReactDOM.render(
 //监测redux中状态的改变，如redux的状态发生了改变，那么重新渲染App组件
 //使用react-redux不需要此步骤
 // store.subscribe(() => ReactDOM.render(<App />, document.getElementById('root')))
+
+
+constructor()
+componentWillMount()
+render()
+componentDidMount()
+
+shouldComponentUpdate()
+componentWillUpdate()
+render()
+componentDidUpdate()
+
+componentWillUnmount()
+ReactDOM.unmountComponentAtNode()
