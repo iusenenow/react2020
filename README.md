@@ -524,13 +524,13 @@ componentDidCatch(error, info) {
 #### 几种通信方式：
 
 		1.props：
-			(1).children props
-			(2).render props
+			(1)children props
+			(2)render props
 		2.消息订阅-发布：
 			pubs-sub、event等等
 		3.集中式管理：
 			redux、dva等等
-		4.conText:
+		4.context:
 			生产者-消费者模式
 
 #### 比较好的搭配方式：
